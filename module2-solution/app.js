@@ -32,6 +32,7 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
   
   bought.items=ShoppingListCheckOffService.getAlreadyItems();
 
+
 }
 
 function ShoppingListCheckOffService() {
@@ -67,20 +68,20 @@ function ShoppingListCheckOffService() {
 
   service.getaddItems = function () {
     return addItems ;
-  }
+   }
 
   service.getAlreadyItems = function () {
     return items ;
-  }
+   }
 
   service.buyItem = function (itemName, quantity) {
-    
+    console.log("itemName " + itemName)
     var item = {
       name: itemName, 
       quantity: quantity
     };
        items.push(item);
- 
+       
   }
 }
 
